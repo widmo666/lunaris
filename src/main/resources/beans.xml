@@ -15,16 +15,15 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd
 http://www.springframework.org/schema/data/jpa
 http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
  
-  	<context:property-placeholder location="classpath:configuration.properties"/>
 
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
-        p:driverClassName="${jdbc.driver.class.name}"
-        p:url="${jdbc.url}"
-        p:username="${jdbc.username}"
-        p:password="${jdbc.password}">
+        p:driverClassName="com.mysql.jdbc.Driver"
+        p:url="jdbc:mysql://127.0.0.1:3306/Lunaris"
+        p:username="root"
+        p:password="root"
+        p:initialSize="5"
+        p:maxActive="10">
     </bean>
-    
-    <bean class="lunaris.utils.SpringApplicationContext"/>
  
     <bean
         class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
@@ -33,9 +32,10 @@ http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
     </bean>
  
     <context:component-scan base-package="lunaris">
-<!--         <context:include-filter type="annotation" -->
-<!--             expression="org.springframework.stereotype.Repository" /> -->
+        <context:include-filter type="annotation"
+            expression="org.springframework.stereotype.Repository" />
     </context:component-scan>
+<!--     <jpa:repositories base-package="com" /> -->
  
     <bean class="org.springframework.orm.jpa.JpaTransactionManager" id="transactionManager">
         <property name="entityManagerFactory" ref="entityManagerFactory" />
