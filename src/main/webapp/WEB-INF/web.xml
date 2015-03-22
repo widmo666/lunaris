@@ -11,21 +11,6 @@ xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 		<param-value>lunaris.rest.RESTservice</param-value>
 	</context-param>
 
-  <servlet>
-    <servlet-name>spring</servlet-name>
-    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-    <init-param>
-      <param-name>contextConfigLocation</param-name>
-      <param-value>classpath:applicationContext.xml</param-value>
-    </init-param>
-    <load-on-startup>1</load-on-startup>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>spring</servlet-name>
-    <url-pattern>/</url-pattern>
-  </servlet-mapping>
-  
-  
 	<listener>
 		<listener-class>
 			org.jboss.resteasy.plugins.server.servlet.ResteasyBootstrap</listener-class>
@@ -38,7 +23,7 @@ xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 	</listener>
 	<context-param>
 	    <param-name>contextConfigLocation</param-name>
-	    <param-value>/WEB-INF/classes/applicationContext.xml</param-value>
+	    <param-value>classpath:applicationContext.xml</param-value>
 	</context-param>
 	
 	<servlet>
