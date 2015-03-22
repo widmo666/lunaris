@@ -39,8 +39,8 @@ public class RESTservice {
 	public User getUserInJSON() {
 
 		User user = new User();
-		user.setUsername("Micha≥");
-		user.setPassword("WÛjtowicz");
+		user.setUsername("Micha≈Ç");
+		user.setPassword("W√≥jtowicz");
 		user.setPin(666);
 
 		return user;
@@ -53,8 +53,8 @@ public class RESTservice {
 	public User getUserInXML() {
 
 		User user = new User();
-		user.setUsername("Micha≥");
-		user.setPassword("WÛjtowicz");
+		user.setUsername("Micha≈Ç");
+		user.setPassword("W√≥jtowicz");
 		user.setPin(1410);
 
 		return user;
@@ -70,7 +70,7 @@ public class RESTservice {
 
 		TypCzolgu typCzolgu = new TypCzolgu();
 		typCzolgu.setId(new Long(1410));
-		typCzolgu.setNazwaTypu("Niszczyciel czo≥gÛw");
+		typCzolgu.setNazwaTypu("Niszczyciel czo≈Çg√≥w");
 
 		czolg.setTypCzolgu(typCzolgu);
 		czolg.setId(new Long(666));
@@ -91,7 +91,7 @@ public class RESTservice {
 
 		TypCzolgu typCzolgu = new TypCzolgu();
 		typCzolgu.setId(new Long(1410));
-		typCzolgu.setNazwaTypu("Niszczyciel czo≥gÛw");
+		typCzolgu.setNazwaTypu("Niszczyciel czo≈Çg√≥w");
 
 		czolg.setTypCzolgu(typCzolgu);
 		czolg.setId(new Long(666));
