@@ -1,12 +1,8 @@
 package lunaris.rest;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.servlet.ServletContext;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
-import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 
 import lunaris.model.Czolg;
@@ -27,20 +23,14 @@ public class RESTservice {
 	@Autowired
 	protected ExampleService exampleService;
 
-	@PersistenceContext
-	private EntityManager em;
-
-	@Context
-	private ServletContext context;
-
 	@GET
 	@Path("/get/user/json")
 	@Produces(MediaType.APPLICATION_JSON + UTF8)
 	public User getUserInJSON() {
 
 		User user = new User();
-		user.setUsername("Micha≥");
-		user.setPassword("WÛjtowicz");
+		user.setUsername("Micha≈Ç");
+		user.setPassword("W√≥jtowicz");
 		user.setPin(666);
 
 		return user;
@@ -53,8 +43,8 @@ public class RESTservice {
 	public User getUserInXML() {
 
 		User user = new User();
-		user.setUsername("Micha≥");
-		user.setPassword("WÛjtowicz");
+		user.setUsername("Micha≈Ç");
+		user.setPassword("W√≥jtowicz");
 		user.setPin(1410);
 
 		return user;
@@ -70,7 +60,7 @@ public class RESTservice {
 
 		TypCzolgu typCzolgu = new TypCzolgu();
 		typCzolgu.setId(new Long(1410));
-		typCzolgu.setNazwaTypu("Niszczyciel czo≥gÛw");
+		typCzolgu.setNazwaTypu("Niszczyciel czo≈Çg√≥w");
 
 		czolg.setTypCzolgu(typCzolgu);
 		czolg.setId(new Long(666));
@@ -91,7 +81,7 @@ public class RESTservice {
 
 		TypCzolgu typCzolgu = new TypCzolgu();
 		typCzolgu.setId(new Long(1410));
-		typCzolgu.setNazwaTypu("Niszczyciel czo≥gÛw");
+		typCzolgu.setNazwaTypu("Niszczyciel czo≈Çg√≥w");
 
 		czolg.setTypCzolgu(typCzolgu);
 		czolg.setId(new Long(666));
